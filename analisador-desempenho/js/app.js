@@ -40,5 +40,6 @@ $("demo").onclick = () => {
 };
 
 $("gerar").onclick = () => mostrarRelatorio(alunos);
+$("baixar").onclick = () => baixarRelatorioPDF(alunos);
 
 render(alunos);
