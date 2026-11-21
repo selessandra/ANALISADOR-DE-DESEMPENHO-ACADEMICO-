@@ -23,19 +23,20 @@ Abra a pasta no VS Code e abra `index.html` no navegador
 | `formatacao.js` | formatação de números e textos |
 | `relatorio.js` | geração do relatório de desempenho |
 | `ui.js` | desenho da tela (tabela e cards) |
-| `app.js` | estado e eventos (botões, filtro, Enter) |
+| `pdf.js` | criação e download do relatório em PDF |
+| `app.js` | estado, eventos e salvamento local dos alunos |
 
 ## Regras
-- Aprovado: média >= 7 | Recuperação: 5 a 6,9 | Reprovado: < 5
+- Aprovado: média >= 7 | Recuperação: de 5 a menos de 7 | Reprovado: < 5
 - De 1 a 4 notas por aluno (aceita vírgula ou ponto: 5,5 ou 5.5)
 
 ## Onde cada conceito aparece em os arquivos de `js/`
 | Critério | Exemplos no código |
 |---|---|
 | Funções puras | `calcularMedia`, `classificar`, `comMedia`, `comSituacao`, `mediaGeral`, `contarPorSituacao`, `validarEntrada`, `formatarRelatorio` |
-| Imutabilidade | `deepFreeze`, `Object.freeze`, spread (`{...aluno}`, `[...alunos]`), `adicionarAluno`, `removerAluno`, `"use strict"` (mutar lança erro) |
+| Imutabilidade | `deepFreeze`, `Object.freeze`, spread (`{...aluno}`, `[...alunos]`); no modo estrito, alterar objeto congelado gera erro |
 | Composição | `pipe`, `compose`, `analisarAluno = pipe(comMedia, comSituacao)`, `gerarRelatorio = pipe(analisarTurma, formatarRelatorio)` |
-| Funções de primeira classe | funções passadas como argumento e retornadas: `criarClassificador`, `selecionarPor`, `filtrarPorSituacao`, `map/filter/reduce` curriadas |
+| Funções de primeira classe | funções passadas como argumento e retornadas: `criarClassificador`, `selecionarPor`, `filtrarPorSituacao`, `map/filter/reduce` parcialmente aplicadas |
 | Processamento de coleções | `map`, `filter`, `reduce`, `find`, `every`, `sort` em cópia (`ordenarPorMediaDesc`) |
 
 Os dados originais (`alunos`) nunca são alterados: a média e a situação são

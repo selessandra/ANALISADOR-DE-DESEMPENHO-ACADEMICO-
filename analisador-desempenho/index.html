@@ -9,7 +9,7 @@
 <body>
 <main>
 <h1>Analisador de Desempenho Acadêmico</h1>
-<p class="sub">Aprovado: média ≥ 7 · Recuperação: 5 a 6,9 · Reprovado: &lt; 5</p>
+<p class="sub">Aprovado: média ≥ 7 · Recuperação: de 5 a menos de 7 · Reprovado: &lt; 5</p>
 
 <section class="card">
   <h2>Registrar aluno</h2>
@@ -34,9 +34,12 @@
 <section class="card">
   <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:8px">
     <h2 style="margin:0">Alunos</h2>
-    <select id="filtro">
-      <option>Todos</option><option>Aprovado</option><option>Recuperação</option><option>Reprovado</option>
-    </select>
+    <div class="row">
+      <select id="filtro">
+        <option>Todos</option><option>Aprovado</option><option>Recuperação</option><option>Reprovado</option>
+      </select>
+      <button id="limpar" class="sec">Limpar turma</button>
+    </div>
   </div>
   <div class="scroll"><table>
     <thead><tr><th>Nome</th><th>Notas</th><th>Média</th><th>Situação</th><th></th></tr></thead>

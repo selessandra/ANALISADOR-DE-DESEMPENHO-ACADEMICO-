@@ -2,6 +2,7 @@
 /* NOTAS — cálculo de média e validação/conversão da entrada digitada */
 
 const calcularMedia = valores => valores.reduce(somar, 0) / valores.length;
+const arredondarMedia = media => Math.round((media + Number.EPSILON) * 100) / 100;
 
 // Aceita vírgula ou ponto: "5,5" e "5.5" viram 5.5
 const textoParaNota = texto => Number(texto.trim().replace(",", "."));

@@ -3,7 +3,7 @@
 
 // Cada etapa devolve um NOVO objeto congelado.
 const comMedia = aluno => Object.freeze({ ...aluno, media: calcularMedia(aluno.notas) });
-const comSituacao = aluno => Object.freeze({ ...aluno, situacao: classificar(aluno.media) });
+const comSituacao = aluno => Object.freeze({ ...aluno, situacao: classificar(arredondarMedia(aluno.media)) });
 
 // Composição: notas -> média -> situação
 const analisarAluno = pipe(comMedia, comSituacao);
