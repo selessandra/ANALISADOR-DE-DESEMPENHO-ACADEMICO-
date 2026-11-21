@@ -43,10 +43,17 @@ Os dados originais (alunos) nunca são alterados: a média e a situação são
 calculadas em uma nova coleção (analisarTurma(alunos)) a cada renderização.
 
 ## COLABORADORES
+
 Alan Sérgio Rodrigues de Carvalho (01697157)
+
 Alessandra Júlia S. Mendonça (01710330)
+
 Alfred Manoel Vicente Silva da Rocha (01695802)
+
 Jhonas Xavier dos Santos Silva (01694333)
+
 Pedro Artur R. F. Nogueira (01705061)
+
 Guilherme De Oliveira Lopes Silva (01699872)
+
 Marcos Emanuel Celestino Tavares (01718690)
